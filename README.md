@@ -46,3 +46,27 @@ To modify the list of participants who receive email invitations:
 
 1. Open zoomcontroller.js.
 2. Update the email addresses in the relevant section to include the desired participants.
+
+## Environment Configuration
+
+Ensure your `.env` file contains the following configurations:
+
+# Zoom Configuration
+ZOOM_ACCOUNT_ID=your_zoom_account_id
+ZOOM_CLIENT_ID=your_zoom_client_id
+ZOOM_CLIENT_SECRET=your_zoom_client_secret
+
+# SMTP Configuration
+SMTP_HOST=your_smtp_host
+SMTP_PORT=your_smtp_port
+SMTP_USER=your_smtp_user
+SMTP_PASS=your_smtp_password
+
+# Email From Address
+FROM_EMAIL=your_from_email_address
+
+## Notes
+
+- Make sure to replace placeholder values in the `.env` file with your actual credentials.
+- Check the console output for any errors or confirmation messages when making API calls.
+- The date and time should be provided in UTC format to ensure correct scheduling of Zoom meetings.
