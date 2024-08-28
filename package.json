@@ -1,0 +1,23 @@
+{
+  "name": "tech_c",
+  "version": "1.0.0",
+  "description": "A Node.js application to integrate Zoom for a training management system",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.4",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "author": "siva",
+  "license": "ISC"
+}
