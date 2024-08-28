@@ -1,7 +1,14 @@
 import { sendMeetingDetails } from '../services/emailService.js';
 import { createZoomMeeting, refreshToken } from '../services/zoomService.js';
+import { validateMeeting } from '../validator/meetingValidator.js';
 
 export const scheduleMeeting = async (req, res) => {
+    // Validate the request body
+    const { error } = validateMeeting(req.body);
+    if (error) {
+        return res.status(400).json({ errors: error.details.map(err => err.message) });
+    }
+
     try {
         const token = await refreshToken()
         const dateTime = req.body.dateTime
